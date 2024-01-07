@@ -53,7 +53,9 @@ alias \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
-	z="zathura"
+	z="zathura" \
+	nf="neofecth" \
+	catgirl="catgirl -T" \
 
 alias \
 	lf="lfub" \
