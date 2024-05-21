@@ -54,7 +54,7 @@ alias \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
 	z="zathura" \
-	nf="neofecth" \
+	ff="fastfetch" \
 	catgirl="catgirl -T" \
 
 alias \
