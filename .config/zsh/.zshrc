@@ -2,7 +2,7 @@
 
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
-PS1="%B%{$fg[white]%}[%{$fg[green]%}%n%{$fg[blue]%}@%{$fg[magenta]%}%M %{$fg[yellow]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
+# PS1="%B%{$fg[white]%}[%{$fg[green]%}%n%{$fg[blue]%}@%{$fg[magenta]%}%M %{$fg[yellow]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
@@ -52,7 +52,17 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Use lf to switch directories and bind it to ctrl-o
+# The "lfcd" of yazi
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	trap 'rm -f -- $tmp >/dev/null 2>&1'
+}
+
+# Use lf to switch directories and bind it to ctrl-p
 lfcd () {
     tmp="$(mktemp -uq)"
     trap 'rm -f $tmp >/dev/null 2>&1 && trap - HUP INT QUIT TERM PWR EXIT' HUP INT QUIT TERM PWR EXIT
@@ -62,7 +72,9 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
-bindkey -s '^o' '^ulfcd\n'
+bindkey -s '^p' '^ulfcd\n'
+
+bindkey -s '^o' '^uyy\n'
 
 bindkey -s '^a' '^ubc -lq\n'
 
@@ -79,3 +91,11 @@ bindkey -M visual '^[[P' vi-delete
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+
+# Starship
+accent_color="$(cat $HOME/.config/zsh/accent)"
+starship config format "'''[╭──\([\$username](bold green)[@](bold 202)[\$hostname](bold 13)\)-\[\$directory\](-\[\$git_branch\$git_metrics\$git_status\])(-\[\$nix_shell\])]($accent_color) \$cmd_duration
+[╰─]($accent_color)[\$shell](bold yellow) '''"
+starship config right_format "'''[\(\$time\)]($accent_color)'''"
+
+eval "$(starship init zsh)"
