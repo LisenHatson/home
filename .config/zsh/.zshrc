@@ -2,7 +2,7 @@
 
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
-# PS1="%B%{$fg[white]%}[%{$fg[green]%}%n%{$fg[blue]%}@%{$fg[magenta]%}%M %{$fg[yellow]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[white]%}(%{$fg[green]%}%n%{$fg[blue]%}@%{$fg[magenta]%}%M %{$fg[yellow]%}%~%{$fg[white]%})%{$reset_color%}$%b "
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
@@ -91,11 +91,3 @@ bindkey -M visual '^[[P' vi-delete
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
-
-# Starship
-accent_color="$(cat $HOME/.config/zsh/accent)"
-starship config format "'''[╭──\([\$username](bold green)[@](bold 202)[\$hostname](bold 13)\)-\[\$directory\](-\[\$git_branch\$git_metrics\$git_status\])(-\[\$nix_shell\])]($accent_color) \$cmd_duration
-[╰─]($accent_color)[\$shell](bold yellow) '''"
-starship config right_format "'''[\(\$time\)]($accent_color)'''"
-
-eval "$(starship init zsh)"
