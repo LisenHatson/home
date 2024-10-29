@@ -1,8 +1,3 @@
-# The Voidrice (Luke Smith <https://lukesmith.xyz>'s dotfiles)
-
-These are the dotfiles deployed by [LARBS](https://larbs.xyz) and as seen on
-[my YouTube channel](https://youtube.com/c/lukesmithxyz).
-
 - Very useful scripts are in `~/.local/bin/`
 - Settings for:
 	- vim/nvim (text editor)
@@ -31,8 +26,5 @@ These dotfiles are intended to go with numerous suckless programs I use:
 ## Install these dotfiles and all dependencies
 
 ```
-wget -O larbs.sh https://raw.githubusercontent.com/LisenHatson/LARBS/master/static/larbs.sh
+git clone git@github:LisenHatson/ax
 ```
-
-or clone the repo files directly to your home directory and install the
-[dependencies](https://github.com/LisenHatson/LARBS/blob/master/static/progs.csv).
