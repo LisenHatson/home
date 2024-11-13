@@ -74,9 +74,9 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
-bindkey -s '^p' '^ulfcd\n'
+bindkey -s '^o' '^ulfcd\n'
 
-bindkey -s '^o' '^uyy\n'
+bindkey -s '^p' '^uyy\n'
 
 bindkey -s '^a' '^ubc -lq\n'
 
