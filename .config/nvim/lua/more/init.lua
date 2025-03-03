@@ -1,6 +1,7 @@
 require("more.set")
 require("more.remap")
 require("more.lazy")
+require("more.conf.colors")
 
 local augroup = vim.api.nvim_create_augroup
 local moreGroup = augroup('LisenHatson', {})
@@ -59,7 +60,7 @@ autocmd('BufEnter', {
         if vim.bo.filetype == "zig" then
             vim.cmd.colorscheme("tokyonight-night")
         else
-            vim.cmd.colorscheme("rose-pine-moon")
+            ColorMyPencils()
         end
     end
 })

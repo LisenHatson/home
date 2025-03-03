@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine-moon"
+	color = color or "monokai"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -10,6 +10,24 @@ return {
 
     {
         "erikbackman/brightburn.vim",
+    },
+
+    {
+        "navarasu/onedark.nvim",
+        config = function ()
+           require("onedark").setup{
+            style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+            transparent = true,  -- Show/hide background
+            }
+        end
+    },
+
+    {
+        "nxstynate/monokai.nvim",
+        config = function()
+            require("monokai").setup({
+              transparent_mode = true,})
+        end
     },
 
     {
