@@ -74,11 +74,13 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
-bindkey -s '^o' '^ulfcd\n'
+bindkey -s '^p' '^ulfcd\n'
 
-bindkey -s '^p' '^uyy\n'
+bindkey -s '^y' '^uyy\n'
 
-bindkey -s '^a' '^ubc -lq\n'
+bindkey -s '^t' '^utmux-sessionizer\n'
+
+bindkey -s '^b' '^ubc -lq\n'
 
 bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
 
