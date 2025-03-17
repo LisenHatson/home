@@ -76,13 +76,13 @@ lfcd () {
 }
 bindkey -s '^p' '^ulfcd\n'
 
-bindkey -s '^y' '^uyy\n'
+bindkey -s '^z' '^uyy\n'
 
-bindkey -s '^t' '^utmux-sessionizer\n'
+bindkey -s '^f' '^utmux-sessionizer\n'
 
 bindkey -s '^b' '^ubc -lq\n'
 
-bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
+bindkey -s '^t' '^ucd "$(dirname "$(fzf)")"\n'
 
 bindkey '^[[P' delete-char
 
