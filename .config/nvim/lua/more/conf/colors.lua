@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "monokai"
+	color = color or "starry"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -13,20 +13,32 @@ return {
     },
 
     {
-        "navarasu/onedark.nvim",
-        config = function ()
-           require("onedark").setup{
-            style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-            transparent = true,  -- Show/hide background
-            }
+        "EdenEast/nightfox.nvim",
+        config = function()
+            require("nightfox").setup({
+              transparent = true,})
         end
+
     },
 
     {
-        "nxstynate/monokai.nvim",
-        config = function()
-            require("monokai").setup({
-              transparent_mode = true,})
+        'ray-x/starry.nvim',
+        config = function ()
+            require("starry").setup({
+                disable = {
+                    background = true,
+                },
+                style = {
+                    name = 'moonlight', -- Theme style name (moonlight, earliestsummer, etc.)
+                    -- " other themes: dracula, oceanic, dracula_blood, 'deep ocean',
+                    -- darker, palenight, monokai, mariana, emerald, middlenight_blue
+                    disable = {},  -- a list of styles to disable, e.g. {'bold', 'underline'}
+                    fix = true,
+                    darker_contrast = true, -- More contrast for darker style
+                    daylight_swith = false, -- Enable day and night style switching
+                    deep_black = false, -- Enable a deeper black background
+                },
+            })
         end
     },
 

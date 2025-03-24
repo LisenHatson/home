@@ -14,25 +14,25 @@
 /* cyan		6	14 */
 /* white	7	15 */
 
-/* ! Base16 OneDark */
-/* ! Scheme: Lalit Magant (http://github.com/tilal6991) */
+/* ! Base16 3024 */
+/* ! Scheme: Jan T. Sott (http://github.com/idleberg) */
 
-/* #define base00 #282c34 */
-/* #define base01 #353b45 */
-/* #define base02 #3e4451 */
-/* #define base03 #545862 */
-/* #define base04 #565c64 */
-/* #define base05 #abb2bf */
-/* #define base06 #b6bdca */
-/* #define base07 #c8ccd4 */
-/* #define base08 #e06c75 */
-/* #define base09 #d19a66 */
-/* #define base0A #e5c07b */
-/* #define base0B #98c379 */
-/* #define base0C #56b6c2 */
-/* #define base0D #61afef */
-/* #define base0E #c678dd */
-/* #define base0F #be5046 */
+/* #define base00 #090300 */
+/* #define base01 #3a3432 */
+/* #define base02 #4a4543 */
+/* #define base03 #5c5855 */
+/* #define base04 #807d7c */
+/* #define base05 #a5a2a2 */
+/* #define base06 #d6d5d4 */
+/* #define base07 #f7f7f7 */
+/* #define base08 #db2d20 */
+/* #define base09 #e8bbd0 */
+/* #define base0A #fded02 */
+/* #define base0B #01a252 */
+/* #define base0C #b5e4f4 */
+/* #define base0D #01a0e4 */
+/* #define base0E #a16a94 */
+/* #define base0F #cdab53 */
 
 /* *.foreground:   base05 */
 /* #ifdef background_opacity */
@@ -179,72 +179,17 @@
 /* *.color20:      base04 */
 /* *.color21:      base06 */
 
-! Base16 Harmonic16 Dark
-! Scheme: Jannik Siebert (https://github.com/janniks)
-
-#define base00 #0b1c2c
-#define base01 #223b54
-#define base02 #405c79
-#define base03 #627e99
-#define base04 #aabcce
-#define base05 #cbd6e2
-#define base06 #e5ebf1
-#define base07 #f7f9fb
-#define base08 #bf8b56
-#define base09 #bfbf56
-#define base0A #8bbf56
-#define base0B #56bf8b
-#define base0C #568bbf
-#define base0D #8b56bf
-#define base0E #bf568b
-#define base0F #bf5656
-
-*.foreground:   base05
-#ifdef background_opacity
-*.background:   [background_opacity]base00
-#else
-*.background:   base00
-#endif
-*.cursorColor:  base05
-
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
-
-*.color8:       base03
-*.color9:       base08
-*.color10:      base0B
-*.color11:      base0A
-*.color12:      base0D
-*.color13:      base0E
-*.color14:      base0C
-*.color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
-
-/* ! Base16 Harmonic16 Light */
+/* ! Base16 Harmonic16 Dark */
 /* ! Scheme: Jannik Siebert (https://github.com/janniks) */
 
-/* #define base00 #f7f9fb */
-/* #define base01 #e5ebf1 */
-/* #define base02 #cbd6e2 */
-/* #define base03 #aabcce */
-/* #define base04 #627e99 */
-/* #define base05 #405c79 */
-/* #define base06 #223b54 */
-/* #define base07 #0b1c2c */
+/* #define base00 #0b1c2c */
+/* #define base01 #223b54 */
+/* #define base02 #405c79 */
+/* #define base03 #627e99 */
+/* #define base04 #aabcce */
+/* #define base05 #cbd6e2 */
+/* #define base06 #e5ebf1 */
+/* #define base07 #f7f9fb */
 /* #define base08 #bf8b56 */
 /* #define base09 #bfbf56 */
 /* #define base0A #8bbf56 */
@@ -288,6 +233,65 @@
 /* *.color19:      base02 */
 /* *.color20:      base04 */
 /* *.color21:      base06 */
+
+! Twilight Depths - Xresources Theme
+! Based on Harmonic16 Dark with a deeper blue focus
+! Created on March 17, 2025
+
+! Define base colors
+#define base00 #0a1824
+#define base01 #1a2f46
+#define base02 #354c69
+#define base03 #526e89
+#define base04 #98aec2
+#define base05 #c5d2e0
+#define base06 #dfe7ef
+#define base07 #f0f5fa
+#define base08 #cf7346
+#define base09 #d9b343
+#define base0A #7ac256
+#define base0B #42d0a5
+#define base0C #3e9bd8
+#define base0D #9c52d9
+#define base0E #d84e99
+#define base0F #e05252
+
+! Terminal colors
+*.foreground:   base05
+#ifdef background_opacity
+*.background:   [background_opacity]base00
+#else
+*.background:   base00
+#endif
+*.cursorColor:  base0C
+
+! Standard terminal colors
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+! Bright terminal colors
+*.color8:       base03
+*.color9:       #e27e54
+*.color10:      #54e2a8
+*.color11:      #e2c154
+*.color12:      #5481e2
+*.color13:      #b454e2
+*.color14:      #54dce2
+*.color15:      base07
+
+! Extended colors
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
 
 /* *.background: .color0 */
 /* *.color256: 0#1d2021 */
