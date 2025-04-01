@@ -10,4 +10,4 @@ case $BLOCK_BUTTON in
 	6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-date "+%a %d %b %Y %H:%M.%S |"
+date "+%a %d %b %Y %H:%M.%S"

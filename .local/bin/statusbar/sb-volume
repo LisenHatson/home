@@ -16,7 +16,7 @@ esac
 vol="$(wpctl get-volume @DEFAULT_SINK@)"
 
 # If muted, print X and exit.
-[ "$vol" != "${vol%\[MUTED\]}" ] && echo \| VOL X \|&& exit
+[ "$vol" != "${vol%\[MUTED\]}" ] && echo VOL X && exit
 
 vol="${vol#Volume: }"
 
@@ -33,7 +33,7 @@ case 1 in
 	$((vol >= 70)) ) icon="" ;;
 	$((vol >= 30)) ) icon="" ;;
 	$((vol >= 1)) ) icon="" ;;
-	* ) echo \| VOL X \| && exit ;;
+	* ) echo VOL X && exit ;;
 esac
 
-echo "| VOL $icon$vol% |"
+echo "VOL $icon$vol%"
