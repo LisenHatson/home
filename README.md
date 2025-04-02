@@ -1,4 +1,4 @@
-# Home
+# Home (Lisen's dotfiles)
 
 This is yet another fork of Luke's repo. My very personalized *voidrice*. I'm still using a lot of Luke's program, but with some addition like ```Yazi```, Primeagen's ```init.lua```, ```Catgirl```, and more.
 
