@@ -1,30 +1,5 @@
-- Very useful scripts are in `~/.local/bin/`
-- Settings for:
-	- vim/nvim (text editor)
-	- zsh (shell)
-	- lf (file manager)
-	- mpd/ncmpcpp (music)
-	- nsxiv (image/gif viewer)
-	- mpv (video player)
-	- other stuff like xdg default programs, inputrc and more, etc.
-- I try to minimize what's directly in `~` so:
-	- All configs that can be in `~/.config/` are.
-	- Some environmental variables have been set in `~/.zprofile` to move configs into `~/.config/`
-- Bookmarks in text files used by various scripts (like `~/.local/bin/shortcuts`)
-	- File bookmarks in `~/.config/shell/bm-files`
-	- Directory bookmarks in `~/.config/shell/bm-dirs`
+# Home
 
-## Usage
+This is yet another fork of Luke's repo. My very personalized *voidrice*. I'm still using a lot of Luke's program, but with some addition like ```Yazi```, Primeagen's ```init.lua```, ```Catgirl```, and more.
 
-These dotfiles are intended to go with numerous suckless programs I use:
-
-- [dwm](https://github.com/lukesmithxyz/dwm) (window manager)
-- [dwmblocks](https://github.com/lukesmithxyz/dwmblocks) (statusbar)
-- [st](https://github.com/lukesmithxyz/st) (terminal emulator)
-
-
-## Install these dotfiles and all dependencies
-
-```
-git clone git@github:LisenHatson/ax
-```
+I'm planning to sync this with git, so any updates I've done I could directly push it to my repo, thus my another machine could pull it.
